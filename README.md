@@ -22,6 +22,6 @@ python3 generate_charts.py
 xdg-open aman_simulation_results.png &
 ```
 Author
-Eng. Ali Marhaf Abdo
+Eng. Ali Morhaf Abdo
 
 Faculty of Information Technology Engineering, Homs University (2026)
