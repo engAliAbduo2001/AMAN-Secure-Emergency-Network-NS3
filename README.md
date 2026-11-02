@@ -37,16 +37,16 @@ Phase 1 Execution Commands
 rm -f aman-flow-*.xml energy_*.txt
 
 # Run Baseline Simulation (Normal Network)
-./ns3 run "scratch/aman"
+./ns3 run "scratch/aman_phase1"
 
 # Run Blackhole Attack Scenario (Unprotected Network)
-./ns3 run "scratch/aman --blackhole=true"
+./ns3 run "scratch/aman_phase1 --blackhole=true"
 
 # Parse metrics and output performance analysis
-python3 analyze_aman.py
+python3 analyze_aman_phase1.py
 
 # Generate comparison plots
-python3 generate_charts.py
+python3 generate_charts_phase1.py
 ```
 Phase 2: Malicious Attack Modeling (Blackhole & Grayhole) & Dynamic IDS Evaluation
 Phase 2 models malicious attacks at the Traffic Control Layer within network Choke Points, introducing both Blackhole and Grayhole (selective 15% drop rate) attacks. It measures the defense efficiency of the dynamic IDS (MacTxDrop promiscuous tracking) alongside the cryptographic security overhead.
