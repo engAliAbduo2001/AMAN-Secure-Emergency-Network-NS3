@@ -68,25 +68,25 @@ You can execute the entire Phase 2 test matrix (Baseline, Security-Only, Attacks
 rm -f aman-flow-*.xml energy_*.txt
 
 # 2. Baseline Scenario
-./ns3 run "scratch/aman"
+./ns3 run "scratch/aman_phase2"
 
 # 3. Standalone Security Layer Test
-./ns3 run "scratch/aman --security=true"
+./ns3 run "scratch/aman_phase2 --security=true"
 
 # 4. Attack Scenarios (Unprotected vs. Protected)
-./ns3 run "scratch/aman --blackhole=true"
-./ns3 run "scratch/aman --blackhole=true --security=true"
-./ns3 run "scratch/aman --grayhole=true"
-./ns3 run "scratch/aman --grayhole=true --security=true"
-./ns3 run "scratch/aman --blackhole=true --grayhole=true --security=true"
+./ns3 run "scratch/aman_phase2 --blackhole=true"
+./ns3 run "scratch/aman_phase2 --blackhole=true --security=true"
+./ns3 run "scratch/aman_phase2 --grayhole=true"
+./ns3 run "scratch/aman_phase2 --grayhole=true --security=true"
+./ns3 run "scratch/aman_phase2 --blackhole=true --grayhole=true --security=true"
 
 # 5. Scalability Testing (50 Mobile Nodes)
-./ns3 run "scratch/aman --blackhole=true --security=true --nNodes=50"
-./ns3 run "scratch/aman --grayhole=true --security=true --nNodes=50"
+./ns3 run "scratch/aman_phase2 --blackhole=true --security=true --nNodes=50"
+./ns3 run "scratch/aman_phase2 --grayhole=true --security=true --nNodes=50"
 
 # 6. Parse Data and Generate Visualizations
-python3 analyze_aman.py
-python3 generate_charts.py
+python3 analyze_aman_phase2.py
+python3 generate_charts_phase2.py
 xdg-open aman_simulation_results.png &
 ```
 ## Academic Context
